@@ -1,39 +1,25 @@
-import Urls from "./urls";
+import { Product } from "./homePage";
 
-const usernameEmailField = '#username'
-const passwordField = '#password'
-const loginButton = 'button[name="login"]'
-const myAccountNavigation = '.woocommerce-MyAccount-navigation'
-const errorAfterWrongLogin = 'ul[role="alert"]'
+const productName = '.product-name'
+const removeItemButton = '.remove'
+const emptyCartAlert = '.cart-empty .woocommerce-info'
+const goToPaymentsButton = '.wc-proceed-to-checkout'
 
-class AccountPage{
+class CartPage{
     
-    fillUsernameFieldWithEmail(email){
-        cy.get(usernameEmailField).type(email)
+    checkThatAddedProductIsInCart(){
+        cy.get(productName).contains(Product.HoodieWithZipper.Name).should('exist')
+    }
+    removeItemFromCart(){
+        cy.get(removeItemButton).click()
+    }
+    chekThatCartIsEmpty(){
+        cy.get(emptyCartAlert).should('exist')
     }
 
-    fillPasswordField(password){
-        cy.get(passwordField).type(password)
+    clickGoToPaymentsButton(){
+        cy.get(goToPaymentsButton).click()
     }
-   
-    clickLoginButton(){
-        cy.get(loginButton).click()
-    }
-
-    checkVisibilityOfMyAccountNavigation(){
-        cy.get(myAccountNavigation).should('be.visible')
-    }
-
-    checkVisibilityOfErrorAfterWrongLogin(){
-        cy.get(errorAfterWrongLogin).should('be.visible')
-    }
-
-    visitPage(){
-        const urls = new Urls
-        urls.visitMyAccountPage()
-    }
-
-    
 }
 
-export default AccountPage;
+export default CartPage;
