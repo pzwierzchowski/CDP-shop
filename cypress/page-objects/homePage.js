@@ -34,7 +34,7 @@ class HomePage {
         })
     }
 
-    clickGoTocartFromProductButton(){
+    clickGoToCartFromProductButton(){
         cy.get(dataBlockNameNew).within(()=>{
             cy.get(checkCartFromProductLevel).click()
         })

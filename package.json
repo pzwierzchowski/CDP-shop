@@ -21,6 +21,7 @@
     "cypress": "^12.3.0"
   },
   "dependencies": {
-    "cypress-localstorage-commands": "^2.2.2"
+    "cypress-localstorage-commands": "^2.2.2",
+    "faker": "^5.5.3"
   }
 }
