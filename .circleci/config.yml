@@ -6,5 +6,4 @@ workflows:
     jobs:
       - cypress/run:
           store_artifacts: true
-          browser: chrome
           parallelism: 4
