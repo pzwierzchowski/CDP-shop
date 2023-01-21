@@ -18,7 +18,7 @@
   "homepage": "https://github.com/pzwierzchowski/CDP-FabrykaTestow#readme",
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
-    "cypress": "^12.1.0"
+    "cypress": "^12.3.0"
   },
   "dependencies": {
     "cypress-localstorage-commands": "^2.2.2"
