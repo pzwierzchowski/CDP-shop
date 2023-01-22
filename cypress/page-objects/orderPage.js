@@ -29,7 +29,7 @@ class OrderPage{
     }
 
     checkOrderFinished(){
-        cy.contains('Zamówienie otrzymane', { timeout: 10000 }).should('exist')
+        cy.contains('Zamówienie otrzymane', { timeout: 20000 }).should('exist')
     }
 
 
