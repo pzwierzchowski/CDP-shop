@@ -10,8 +10,5 @@ workflows:
               - cypress/install
             store_artifacts: true
             parallel: true
-            parallelism: 2
+            parallelism: 3
             group: 2 machines
-            post-steps:
-            - store_test_results:
-                path: cypress/results
