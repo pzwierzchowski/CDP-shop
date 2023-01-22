@@ -17,6 +17,5 @@ describe('my first scenario', () => {
     orderPage.fillAllRequiredFields()
     orderPage.clickOrderFinishButton()
     orderPage.checkOrderFinished()
-
   })
 })
