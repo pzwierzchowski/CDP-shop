@@ -6,4 +6,6 @@ workflows:
     jobs:
         - cypress/run:
             store_artifacts: true
-            parallelism: 1
+            parallel: true
+            parallelism: 2
+            group: 2 machines
