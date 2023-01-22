@@ -18,6 +18,7 @@ class CartPage{
     checkThatCartIsEmpty(){
         cy.get(emptyCartAlert).should('exist')
     }
+    
     clickGoToPaymentsButton(){
         cy.get(goToPaymentsButton).click()
     }
