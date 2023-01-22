@@ -5,7 +5,7 @@ const removeItemButton = '.remove'
 const emptyCartAlert = '.cart-empty.woocommerce-info'
 const goToPaymentsButton = '.wc-proceed-to-checkout'
 
-class CartPage{
+class CartPage{ 
     
     checkThatAddedProductIsInCart(){
         cy.get(productName).contains(Product.HoodieWithZipper.Name).should('exist')
